@@ -1,0 +1,157 @@
+55.1.3:
+* Fixes non-fatal error with Dimensional Anchors in SSP.
+
+55.1.2:
+* Might fix IDs not being in the config when there are conflicts.
+
+55.1.1:
+* Fixed dupe bug.
+
+55.0.0:
+* Updated to Minecraft 1.5.2.
+
+54.0.2:
+* Bugfix required for InfiniTubes to work with Buildcraft power.
+
+54.0.1:
+* Fixed crash when breaking a Dimensional Anchor.
+
+54.0.0:
+* Updated to Minecraft 1.5.1.
+
+53.0.0:
+* Updated to Minecraft 1.5.
+
+52.4.7:
+* Fixed IDs not being saved in the config if there's a conflict.
+
+52.4.6:
+* Possibly required update for Immibis's Microblocks 52.1.2.
+
+52.4.5:
+* Fixed? transformed blocks being black in inventories
+
+52.4.4:
+* Fixed a microblock-related NPE.
+
+52.4.3:
+* Changed load order again, should fix FML crashes on startup.
+
+52.4.2:
+* Added detection of item ID conflicts.
+* Added a thing telling FML to load this before all other mods if possible - fixes the IC2/microblocks load order problem.
+
+52.4.1:
+* Fixed a broken microblock-related method causing unpredictable server freezes, sorry Kane!
+
+52.4.0:
+* Separated microblocks into a separate coremod like they should have been from the start.
+  You don't need to update configs. You do need to download Immibis's Microblocks if you
+  had microblocks enabled, or they will disappear from the world.
+  The API is still in Immibis Core.
+* Immibis Core is back to not being a coremod. Sorry for any confusion.
+
+52.3.7:
+* Microblocks default to off again.
+* Made microblocks always render with non-smooth lighting.
+  This reduces graphical glitches but they are not fixed yet.
+* NEI integration uses NBT instead of damage values like it should.
+  Microblocks spawned from NEI don't always stack correctly.
+* Added microblocks to NEI subset "Blocks.Microblocks" - so you can hide them from NEI.
+* Added config option for auto-detection of valid blocks to make microblocks out of.
+  Might not work well in SMP.
+  Not all blocks are textured or named correctly.
+  This lags NEI due to the sheer number of items.
+
+52.3.6:
+* Fixed the fix in 52.3.3 (where it crashes on startup when not installed as a coremod).
+
+52.3.5:
+* Fixed IC2 cables discoing when you punch them.
+
+52.3.4:
+* Fixed possible microblock-related client crash.
+
+52.3.3:
+* Fixed crash when not installed as a coremod.
+
+52.3.2:
+* Fixed a wrong obfuscated name.
+
+52.3.1:
+* Fixed a copy-paste derp
+
+52.3.0:
+* Immibis Core can now be installed as a coremod, instead of a normal mod.
+* Added microblock transformer, only available when installed as a coremod. Cover ALL the things!
+* Microblock switch moved to immibis-coremod.cfg (even when not a coremod) and defaults to true.
+* Fixed previous fix.
+
+52.2.6:
+* Fixed crash when someone else breaks a cover within your view distance.
+
+52.2.5:
+* Probably fixed dark GUIs on some systems in Liquid XP (and maybe InfiniTubes)
+
+52.2.4:
+* Fixed previous update.
+
+52.2.3:
+* Fixed block and item IDs occasionally not being added to the config.
+
+52.2.2:
+* Disabled a sanity check when IDResolver is installed.
+* IMPORTANT: Changed the way InfiniTubes IDs are assigned for consistency.
+  The defaults have changed, and the option name in the config has changed (added .id to the end).
+  Config should auto-convert but back it up just in case. 
+  This only affects InfiniTubes.
+
+52.2.1:
+* Added part IDs to detailed item tooltips (F3+H)
+
+52.2.0:
+* Refactored microblock API.
+* Improved handling of invalid microblock IDs.
+* Allowed microblock IDs over 32767 by storing them in NBT. Old ones will not stack with new ones unless you place and break them.
+
+52.1.0:
+* Included some microblock fixes, and an experimental mod framework used by InfiniTubes.
+
+52.0.5:
+* Recompiled with Java 6.
+
+52.0.4:
+* Re-added missing registration of microblock tile entity. Existing placed microblocks will disappear. Sorry :( 
+
+52.0.3:
+* Fixed packaging again.
+
+52.0.2:
+* Fixed mcmod.info
+
+52.0.1:
+* Fixed packaging.
+
+52.0.0:
+* Updated to 1.4.6.
+* For FML's ID mismatch detection, all blocks registered by my mods will count as being registered by Immibis Core,
+  instead of sometimes Immibis Core and sometimes the actual mod. This may result in ID mismatch warnings the first
+  time you load an old world, which can be safely ignored.
+* API rearrangements.
+* Blocks and items now use consistent default IDs based on the hashcode of their name. Before this, all blocks
+  had the same default ID, which was pretty pointless as all but the first would get autoassigned.
+  This might need to be changed again if it causes too many conflicts.
+
+51.0.6:
+* Fixed IndexOutOfBoundsException caused by breaking the same part twice (caused by lag).
+* Internal changes to microblock API.
+* Added chiseled sandstone, smooth sandstone and redstone lamp microblocks.
+
+51.0.5:
+* Fixed microblocks not being placeable.
+* "Microblock container" blocks with no microblocks in them will now destroy themselves.
+
+51.0.4:
+* Started changelog.
+* Now splits packets bigger than 32kiB and reassembles them on the other end. (fixes Immibis's Peripherals speakers in SMP)
+* Fixed an ID allocation typo which made it easier for conflicts to happen when adding new mods.
