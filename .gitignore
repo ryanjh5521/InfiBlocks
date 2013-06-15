@@ -1,9 +1,5 @@
 /MCP/*
-
-/src/minecraft/*
-/src/minecraft_server/*
-/src/common/*
-!/MCP/forge/mcp/src/minecraft/mods/ryanjh5521/*
+!/MCP/forge/mcp/src/minecraft/mods/*
 
 *.bat
 *.sh
