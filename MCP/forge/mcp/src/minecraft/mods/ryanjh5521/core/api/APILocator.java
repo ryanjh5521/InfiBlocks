@@ -13,7 +13,7 @@ public final class APILocator {
 	
 	private static <T> T getField(String name) {
 		try {
-			return (T)Class.forName("mods.ryanjh5521.core.ryanjh5521Core").getField(name).get(null);
+			return (T)Class.forName("mods.ryanjh5521.core.ImmibisCore").getField(name).get(null);
 		} catch(ClassNotFoundException e) {
 			return null;
 		} catch(RuntimeException e) {

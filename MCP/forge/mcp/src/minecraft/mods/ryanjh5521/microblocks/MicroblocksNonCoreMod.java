@@ -13,11 +13,12 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 @FMLModInfo(
 		modid=ModProperties.MODID,
 		name=ModProperties.MOD_NAME,
-		url="http://www.minecraftforum.net/topic/1001131-110-ryanjh5521s-mods-smp/",
+		url="http://www.minecraftforum.net/topic/1001131-",
 		description="",
 		authors="ryanjh5521"
 		)
 public class MicroblocksNonCoreMod {
+	
 	
 	@Init
 	public void init(FMLInitializationEvent evt) {
