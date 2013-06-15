@@ -21,11 +21,9 @@ public class IDAllocator implements IIDAllocator {
 	private boolean canRequest = true;
 	
 	private static class Request {
-		@SuppressWarnings("unused")
 		public Object mod;
 		public String name;
 		public IIDCallback callback;
-		@SuppressWarnings("unused")
 		public int min, max, _default;
 		public IDType type;
 		

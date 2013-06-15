@@ -57,6 +57,10 @@ public class MicroblockItemRenderer implements IItemRenderer {
 			break;
 		case FIRST_PERSON_MAP:
 			break;
+		case EQUIPPED_FIRST_PERSON:
+			break;
+		default:
+			break;
 		}
 	}
 

@@ -85,7 +85,7 @@ public class BasicInventory implements IInventory {
 		for(int i = start; i < end; i++)
 		{
 			ItemStack ov = dest.getStackInSlot(i);
-			if(ov == null || !ryanjh5521Core.areItemsEqual(ov, input))
+			if(ov == null || !ImmibisCore.areItemsEqual(ov, input))
 				continue;
 			int max = ov.getMaxStackSize();
 			if(ov.stackSize + input.stackSize <= max)

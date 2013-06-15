@@ -406,7 +406,6 @@ public class MicroblockSupporterTransformer implements IClassTransformer {
 			}
 		}
 		
-		@SuppressWarnings("unused")
 		public String className, superclass;
 		
 		public boolean saw_addCollidingBlockToList;
