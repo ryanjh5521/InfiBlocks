@@ -1,2 +1,2 @@
 Manifest-Version: 1.0
-FMLCorePlugin: mods.immibis.microblocks.coremod.MicroblocksCoreMod
+FMLCorePlugin: mods.ryanjh5521.microblocks.coremod.MicroblocksCoreMod
