@@ -20,11 +20,11 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 public class MicroblocksNonCoreMod {
 	
 	
-	@Init
-	public void init(FMLInitializationEvent evt) {
-		if(!MicroblocksCoreMod.TEST_DISABLED && !Loader.isModLoaded("ryanjh5521Microblocks"))
-			ErrorScreen.displayFatalError(
-				"ryanjh5521's Microblocks must be installed in the coremods folder.",
-				"Please correct the problem and restart Minecraft.");
-	}
+//	@Init
+	//public void init(FMLInitializationEvent evt) {
+		//if(!MicroblocksCoreMod.TEST_DISABLED && !Loader.isModLoaded("ryanjh5521Microblocks"))
+			//ErrorScreen.displayFatalError(
+				//"ryanjh5521's Microblocks must be installed in the coremods folder.",
+				//"Please correct the problem and restart Minecraft.");
+	//}
 }
