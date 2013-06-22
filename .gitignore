@@ -1,5 +1,2 @@
-/MCP/*
-!/MCP/forge/mcp/src/minecraft/mods/*
-
 *.bat
 *.sh

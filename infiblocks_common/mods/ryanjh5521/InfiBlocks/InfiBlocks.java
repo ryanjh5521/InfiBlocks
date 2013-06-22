@@ -1,7 +1,10 @@
 package mods.ryanjh5521.InfiBlocks;
 
 import net.minecraft.block.Block;
+import mods.ryanjh5521.InfiBlocks.blocks.bricks.CobblestoneBricks;
+import mods.ryanjh5521.InfiBlocks.blocks.bricks.DiamondBricks;
 import mods.ryanjh5521.InfiBlocks.blocks.bricks.GoldBricks;
+import mods.ryanjh5521.InfiBlocks.blocks.bricks.IronBricks;
 import mods.ryanjh5521.InfiBlocks.common.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -32,6 +35,15 @@ public class InfiBlocks {
         //Bricks
         public final static Block brickGold = new GoldBricks(500, 1, Material.anvil)
         .setHardness(35.0F).setUnlocalizedName("brickGold").setCreativeTab(CreativeTabs.tabBlock);
+        
+        public final static Block brickDiamond = new DiamondBricks(501, 1, Material.anvil)
+        .setHardness(35.0F).setUnlocalizedName("brickDiamond").setCreativeTab(CreativeTabs.tabBlock);
+        
+        public final static Block brickCobblestone = new CobblestoneBricks(502, 1, Material.anvil)
+        .setHardness(35.0F).setUnlocalizedName("brickCobblestone").setCreativeTab(CreativeTabs.tabBlock);
+        
+        public final static Block brickIron = new IronBricks(503, 1, Material.anvil)
+        .setHardness(35.0F).setUnlocalizedName("brickIron").setCreativeTab(CreativeTabs.tabBlock);
         // Says where the client and server 'proxy' code is loaded.
         @SidedProxy(clientSide="mods.ryanjh5521.InfiBlocks.client.ClientProxy", serverSide="mods.ryanjh5521.InfiBlocks.common.CommonProxy")
         public static CommonProxy proxy;
@@ -44,8 +56,20 @@ public class InfiBlocks {
         @Init
         public void load(FMLInitializationEvent event) {
         	LanguageRegistry.addName(brickGold, "GoldBricks");
-            MinecraftForge.setBlockHarvestLevel(brickGold, "pickaxe", 3);
+            MinecraftForge.setBlockHarvestLevel(brickGold, "pickaxe", 1);
             GameRegistry.registerBlock(brickGold, "brickGold");
+            
+            LanguageRegistry.addName(brickDiamond, "DiamondBricks");
+            MinecraftForge.setBlockHarvestLevel(brickDiamond, "pickaxe", 3);
+            GameRegistry.registerBlock(brickDiamond, "brickDiamond");
+            
+            LanguageRegistry.addName(brickCobblestone, "CobblestoneBricks");
+            MinecraftForge.setBlockHarvestLevel(brickGold, "pickaxe", 0);
+            GameRegistry.registerBlock(brickCobblestone, "brickCobblestone");
+            
+            LanguageRegistry.addName(brickIron, "IronBricks");
+            MinecraftForge.setBlockHarvestLevel(brickIron, "pickaxe", 2);
+            GameRegistry.registerBlock(brickIron, "brickIron");
         }
         
         @PostInit
