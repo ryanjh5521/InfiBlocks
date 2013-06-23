@@ -55,6 +55,7 @@ public class InfiBlocks {
         
         @Init
         public void load(FMLInitializationEvent event) {
+            // Register blocks
         	LanguageRegistry.addName(brickGold, "GoldBricks");
             MinecraftForge.setBlockHarvestLevel(brickGold, "pickaxe", 1);
             GameRegistry.registerBlock(brickGold, "brickGold");
@@ -70,6 +71,26 @@ public class InfiBlocks {
             LanguageRegistry.addName(brickIron, "IronBricks");
             MinecraftForge.setBlockHarvestLevel(brickIron, "pickaxe", 2);
             GameRegistry.registerBlock(brickIron, "brickIron");
+           // Item Stacks
+            ItemStack diamondStack = new ItemStack(Block.blockDiamond, 1);
+            ItemStack goldStack = new ItemStack(Block.blockGold, 1);
+            ItemStack ironStack = new ItemStack(Block.blockIron, 1);
+            ItemStack cobblestoneStack = new ItemStack(Block.cobblestone, 1);
+
+            
+            // Recipes
+            GameRegistry.addRecipe(new ItemStack(brickGold), "xx", "xx", 
+                    'x', goldStack);
+            
+            GameRegistry.addRecipe(new ItemStack(brickIron), "xx", "xx", 
+                    'x', ironStack);
+            
+            GameRegistry.addRecipe(new ItemStack(brickDiamond), "xx", "xx", 
+                    'x', diamondStack);
+            
+            GameRegistry.addRecipe(new ItemStack(brickCobblestone), "xx", "xx", 
+                    'x', cobblestoneStack);
+            
         }
         
         @PostInit
