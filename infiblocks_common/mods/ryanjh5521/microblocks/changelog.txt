@@ -1,2 +1,0 @@
-0.00.001:
-  - First Sucessful build. All MicroBlocks code was coded by Immibis's, all I did was change it up alittle bit.

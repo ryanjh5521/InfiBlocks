@@ -1,2 +1,0 @@
-Manifest-Version: 1.0
-FMLCorePlugin: mods.ryanjh5521.microblocks.coremod.MicroblocksCoreMod
