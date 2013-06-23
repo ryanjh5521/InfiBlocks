@@ -3,9 +3,6 @@ package mods.ryanjh5521.InfiBlocks;
 import mods.ryanjh5521.InfiBlocks.common.CommonProxy;
 import mods.ryanjh5521.InfiBlocks.util.BlockUtils;
 import mods.ryanjh5521.InfiBlocks.util.ConfigUtils;
-import mods.ryanjh5521.InfiBlocks.util.Recipes;
-import net.minecraft.block.Block;
-import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
@@ -16,7 +13,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
-import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid="InfiBlocks", name="InfiBlocks", version="0.00.001")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
@@ -40,6 +36,8 @@ public class InfiBlocks {
         @Init
         public void load(FMLInitializationEvent event) {
             BlockUtils.registerBlocks();
+            BlockUtils.addRecipes();
+            BlockUtils.addNames();
             
             
         }

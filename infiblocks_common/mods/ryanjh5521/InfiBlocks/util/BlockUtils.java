@@ -7,8 +7,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import com.google.common.base.Optional;
 
+
+import mods.ryanjh5521.InfiBlocks.InfiBlocks;
 import mods.ryanjh5521.InfiBlocks.api.Blocks;
+import mods.ryanjh5521.InfiBlocks.blocks.bricks.CobblestoneBricks;
 import mods.ryanjh5521.InfiBlocks.blocks.bricks.DiamondBricks;
+import mods.ryanjh5521.InfiBlocks.blocks.bricks.GoldBricks;
+import mods.ryanjh5521.InfiBlocks.blocks.bricks.IronBricks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -18,9 +23,9 @@ public class BlockUtils {
     {
         // Block declaration
         Blocks.DiamondBricks = Optional.of((new DiamondBricks(ConfigUtils.DiamondBrickID)).setHardness(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("brickDiamond"));
-        Blocks.GoldBricks = Optional.of((new DiamondBricks(ConfigUtils.GoldBrickID)).setHardness(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("brickGold"));
-        Blocks.IronBricks = Optional.of((new DiamondBricks(ConfigUtils.IronBrickID)).setHardness(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("brickCobblestone"));
-        Blocks.CobblestoneBricks = Optional.of((new DiamondBricks(ConfigUtils.CobbleBrickID)).setHardness(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("brickIron"));
+        Blocks.GoldBricks = Optional.of((new GoldBricks(ConfigUtils.GoldBrickID)).setHardness(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("brickGold"));
+        Blocks.IronBricks = Optional.of((new IronBricks(ConfigUtils.IronBrickID)).setHardness(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("brickCobblestone"));
+        Blocks.CobblestoneBricks = Optional.of((new CobblestoneBricks(ConfigUtils.CobbleBrickID)).setHardness(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("brickIron"));
     
     }
 
@@ -32,6 +37,35 @@ public class BlockUtils {
         GameRegistry.registerBlock(Blocks.IronBricks.get(), "brickIron");
         GameRegistry.registerBlock(Blocks.GoldBricks.get(), "brickGold");
     }
+    public static void addRecipes()
+    {
+        ItemStack diamondStack = new ItemStack(Block.blockDiamond, 1);
+        ItemStack goldStack = new ItemStack(Block.blockGold, 1);
+        ItemStack ironStack = new ItemStack(Block.blockIron, 1);
+        ItemStack cobblestoneStack = new ItemStack(Block.cobblestone, 1);
+
+        
+        // Recipes
+        GameRegistry.addRecipe(new ItemStack(Blocks.GoldBricks.get()), "xx", "xx", 
+                'x', goldStack);
+        
+        GameRegistry.addRecipe(new ItemStack(Blocks.IronBricks.get()), "xx", "xx", 
+                'x', ironStack);
+        
+        GameRegistry.addRecipe(new ItemStack(Blocks.DiamondBricks.get()), "xx", "xx", 
+                'x', diamondStack);
+        
+        GameRegistry.addRecipe(new ItemStack(Blocks.CobblestoneBricks.get()), "xx", "xx", 
+                'x', cobblestoneStack);
+    }
+    public static void addNames()
+    {
+        LanguageRegistry.addName(Blocks.DiamondBricks.get(), "Diamond Bricks");
+        LanguageRegistry.addName(Blocks.GoldBricks.get(), "Gold Bricks");
+        LanguageRegistry.addName(Blocks.CobblestoneBricks.get(), "Cobblestone Bricks");
+        LanguageRegistry.addName(Blocks.IronBricks.get(), "Iron Bricks");
+
+
     
-    
+    }
 }
