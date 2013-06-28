@@ -27,7 +27,6 @@ public class BlockUtils {
         Blocks.GoldBricks = Optional.of((new GoldBricks(ConfigUtils.GoldBrickID)).setHardness(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("brickGold"));
         Blocks.IronBricks = Optional.of((new IronBricks(ConfigUtils.IronBrickID)).setHardness(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("brickCobblestone"));
         Blocks.CobblestoneBricks = Optional.of((new CobblestoneBricks(ConfigUtils.CobbleBrickID)).setHardness(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("brickIron"));
-        Blocks.Sheetrock = Optional.of((new Sheetrock(ConfigUtils.SheetrockID)).setHardness(0.5F).setStepSound(Block.soundClothFootstep).setUnlocalizedName("blockSheetrock"));
     
     }
 

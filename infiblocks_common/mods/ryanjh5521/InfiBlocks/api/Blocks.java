@@ -17,6 +17,4 @@ public class Blocks
     public static Optional<? extends Block> IronBricks                 = Optional.absent();
     
     public static Optional<? extends Block> CobblestoneBricks          = Optional.absent();
-    
-    public static Optional<? extends Block> Sheetrock                  = Optional.absent();
 }
