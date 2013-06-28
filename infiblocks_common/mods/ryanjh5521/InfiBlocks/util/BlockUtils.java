@@ -10,10 +10,11 @@ import com.google.common.base.Optional;
 
 import mods.ryanjh5521.InfiBlocks.InfiBlocks;
 import mods.ryanjh5521.InfiBlocks.api.Blocks;
-import mods.ryanjh5521.InfiBlocks.blocks.bricks.CobblestoneBricks;
-import mods.ryanjh5521.InfiBlocks.blocks.bricks.DiamondBricks;
-import mods.ryanjh5521.InfiBlocks.blocks.bricks.GoldBricks;
-import mods.ryanjh5521.InfiBlocks.blocks.bricks.IronBricks;
+import mods.ryanjh5521.InfiBlocks.blocks.CobblestoneBricks;
+import mods.ryanjh5521.InfiBlocks.blocks.DiamondBricks;
+import mods.ryanjh5521.InfiBlocks.blocks.GoldBricks;
+import mods.ryanjh5521.InfiBlocks.blocks.IronBricks;
+import mods.ryanjh5521.InfiBlocks.blocks.Sheetrock;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -26,6 +27,7 @@ public class BlockUtils {
         Blocks.GoldBricks = Optional.of((new GoldBricks(ConfigUtils.GoldBrickID)).setHardness(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("brickGold"));
         Blocks.IronBricks = Optional.of((new IronBricks(ConfigUtils.IronBrickID)).setHardness(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("brickCobblestone"));
         Blocks.CobblestoneBricks = Optional.of((new CobblestoneBricks(ConfigUtils.CobbleBrickID)).setHardness(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("brickIron"));
+        Blocks.Sheetrock = Optional.of((new Sheetrock(ConfigUtils.SheetrockID)).setHardness(0.5F).setStepSound(Block.soundClothFootstep).setUnlocalizedName("blockSheetrock"));
     
     }
 
@@ -36,6 +38,7 @@ public class BlockUtils {
         GameRegistry.registerBlock(Blocks.CobblestoneBricks.get(), "brickCobblestone");
         GameRegistry.registerBlock(Blocks.IronBricks.get(), "brickIron");
         GameRegistry.registerBlock(Blocks.GoldBricks.get(), "brickGold");
+        GameRegistry.registerBlock(Blocks.Sheetrock.get(), "blockSheetrock");
     }
     public static void addRecipes()
     {
@@ -64,6 +67,7 @@ public class BlockUtils {
         LanguageRegistry.addName(Blocks.GoldBricks.get(), "Gold Bricks");
         LanguageRegistry.addName(Blocks.CobblestoneBricks.get(), "Cobblestone Bricks");
         LanguageRegistry.addName(Blocks.IronBricks.get(), "Iron Bricks");
+        LanguageRegistry.addName(Blocks.Sheetrock.get(), "Sheetrock");
 
 
     

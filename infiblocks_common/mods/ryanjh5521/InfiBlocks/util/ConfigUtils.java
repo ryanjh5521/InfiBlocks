@@ -21,6 +21,7 @@ public class ConfigUtils {
 	public static int GoldBrickID;
 	public static int IronBrickID;
 	public static int CobbleBrickID;
+	public static int SheetrockID;
 	
 	public static void init(File configFile)
 	{
@@ -33,8 +34,8 @@ public class ConfigUtils {
 			CobbleBrickID = config.getBlock("Cobblestone Bricks", 520, null).getInt();
 			DiamondBrickID = config.getBlock("Diamond Bricks", 521, null).getInt();
 			GoldBrickID = config.getBlock("Gold Bricks", 522, null).getInt();
-            IronBrickID = config.getBlock("Iron Bricks", 1923, null).getInt();
-			
+            IronBrickID = config.getBlock("Iron Bricks", 523, null).getInt();
+			SheetrockID = config.getBlock("Sheetrock", 524, null).getInt();
 			FMLCommonHandler.instance().getFMLLogger().log(Level.INFO, "[InfiBlocks] Generated Configuration File!");
 		}
 		catch (Exception e)

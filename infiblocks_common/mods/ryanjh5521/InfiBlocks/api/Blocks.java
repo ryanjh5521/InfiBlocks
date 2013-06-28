@@ -10,11 +10,13 @@ import com.google.common.base.Optional;
 
 public class Blocks
 {
-    public static Optional<? extends Block> GoldBricks               = Optional.absent();
+    public static Optional<? extends Block> GoldBricks                 = Optional.absent();
     
-    public static Optional<? extends Block> DiamondBricks                  = Optional.absent();
+    public static Optional<? extends Block> DiamondBricks              = Optional.absent();
     
-    public static Optional<? extends Block> IronBricks                  = Optional.absent();
+    public static Optional<? extends Block> IronBricks                 = Optional.absent();
     
-    public static Optional<? extends Block> CobblestoneBricks           = Optional.absent();
+    public static Optional<? extends Block> CobblestoneBricks          = Optional.absent();
+    
+    public static Optional<? extends Block> Sheetrock                  = Optional.absent();
 }
